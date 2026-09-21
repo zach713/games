@@ -1,0 +1,6 @@
+{
+  "name": "ModiversPro - Game & Mod Installer",
+  "description": "Download verified game mods, unlocked full versions, and menus for Android (APK) and iOS (IPA).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
