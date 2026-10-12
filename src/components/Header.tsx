@@ -10,10 +10,12 @@ interface HeaderProps {
 }
 
 const CATEGORIES = [
-  'All Mods',
+  'All Items',
+  'Simulators',
+  'Action & RPG',
+  'Casual & Creative',
   'Mod Menu',
-  'Casual',
-  'Latest Version'
+  'Free Codes'
 ];
 
 export const Header: React.FC<HeaderProps> = ({

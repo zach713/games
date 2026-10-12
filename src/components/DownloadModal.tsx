@@ -3,6 +3,7 @@ import { GameMod, Platform, DownloadState } from '../types';
 import { AndroidIcon, AppleIcon } from './Icons';
 import { X, ShieldCheck } from 'lucide-react';
 import confetti from 'canvas-confetti';
+import { getFallbackImage } from '../utils/imageFallback';
 
 const LOCKER_URL = 'https://appcomplete.org/cl/i/1xxmrk';
 
@@ -25,12 +26,13 @@ export const DownloadModal: React.FC<DownloadModalProps> = ({
   const [subStatus, setSubStatus] = useState<string>('CONNECTING...');
   const timerRef = useRef<number | null>(null);
 
-  // Directly perform redirection to locker
+  // Directly perform redirection to target url
   const executeDirectRedirect = () => {
+    const targetUrl = game?.redirectUrl || LOCKER_URL;
     try {
-      window.location.href = LOCKER_URL;
+      window.location.href = targetUrl;
     } catch {
-      window.open(LOCKER_URL, '_blank');
+      window.open(targetUrl, '_blank');
     }
   };
 
@@ -72,21 +74,23 @@ export const DownloadModal: React.FC<DownloadModalProps> = ({
 
         const next = Math.min(100, prev + (prev < 15 ? 1 : prev < 60 ? 3 : prev < 90 ? 2 : 1));
 
+        const isCode = game.itemType === 'code';
+
         if (next < 15) {
-          setPrimaryStatus('INITIALIZING...');
-          setSubStatus('CONNECTING...');
+          setPrimaryStatus(isCode ? 'CONNECTING...' : 'INITIALIZING...');
+          setSubStatus(isCode ? 'ESTABLISHING SERVER HANDSHAKE...' : 'CONNECTING...');
         } else if (next < 45) {
           setDownloadState('downloading');
-          setPrimaryStatus('DOWNLOADING PACKAGE...');
-          setSubStatus(`FETCHING ${platform} CORE FILES...`);
+          setPrimaryStatus(isCode ? 'SEARCHING ACTIVE CODES...' : 'DOWNLOADING PACKAGE...');
+          setSubStatus(isCode ? `CHECKING ${platform} REWARDS...` : `FETCHING ${platform} CORE FILES...`);
         } else if (next < 75) {
           setDownloadState('injecting');
-          setPrimaryStatus('INJECTING MOD MENU...');
-          setSubStatus('BYPASSING INTEGRITY CHECKS...');
+          setPrimaryStatus(isCode ? 'GENERATING REWARD VOUCHER...' : 'INJECTING MOD MENU...');
+          setSubStatus(isCode ? 'APPLYING MYTHIC EGG MULTIPLIER...' : 'BYPASSING INTEGRITY CHECKS...');
         } else if (next < 100) {
           setDownloadState('finalizing');
-          setPrimaryStatus('FINALIZING INSTALLER...');
-          setSubStatus(`SIGNING ${platform} CERTIFICATE...`);
+          setPrimaryStatus(isCode ? 'FINALIZING CODE BUNDLE...' : 'FINALIZING INSTALLER...');
+          setSubStatus(isCode ? 'SECURING UNCLAIMED TOKEN...' : `SIGNING ${platform} CERTIFICATE...`);
         }
 
         return next;
@@ -131,6 +135,12 @@ export const DownloadModal: React.FC<DownloadModalProps> = ({
               src={game.image}
               alt={game.title}
               className="w-full h-full object-cover"
+              referrerPolicy="no-referrer"
+              onError={(e) => {
+                const target = e.currentTarget;
+                target.onerror = null;
+                target.src = getFallbackImage(game.title);
+              }}
             />
           </div>
 
@@ -168,7 +178,7 @@ export const DownloadModal: React.FC<DownloadModalProps> = ({
         {/* Package Information / Redirect Notice */}
         <div className="w-full bg-[#040810] border border-[#0f2133] rounded-2xl p-3 text-left">
           <div className="flex items-center justify-between text-xs text-gray-400 mb-1.5 font-medium">
-            <span className="text-gray-300">File:</span>
+            <span className="text-gray-300">{game.itemType === 'code' ? 'Reward Package:' : 'File:'}</span>
             <span className="text-cyan-400 font-mono truncate max-w-[220px]">
               {platform === 'APK' ? game.apkName : game.ipaName}
             </span>

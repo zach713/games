@@ -10,23 +10,30 @@ export interface GameMod {
   title: string;
   shortTitle?: string;
   badge: string;
+  itemType?: 'mod' | 'code';
   version: string;
   sizeMB: number; // in MB
   displaySize: string;
   image: string;
   downloadsCount: string;
   rating: number;
-  category: 'Popular' | 'Action' | 'Sandbox' | 'Horror' | 'Adventure' | 'Casual';
+  category: 'Popular' | 'Action' | 'Sandbox' | 'Horror' | 'Adventure' | 'Casual' | 'Rewards' | 'Simulation';
   description: string;
   modFeatures: string[];
   apkName: string;
   ipaName: string;
   redirectUrl?: string;
+  actionButtonText?: {
+    primary: string;
+    secondary?: string;
+  };
   lastUpdated: string;
   compatibility: {
     android: string;
     ios: string;
   };
+  similarGameIds?: string[];
+  similarTheme?: string;
 }
 
 export type DownloadState = 

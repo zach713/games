@@ -9,7 +9,7 @@ import { Shield, Sparkles, HelpCircle, CheckCircle, Smartphone, AlertCircle } fr
 
 export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All Mods');
+  const [selectedCategory, setSelectedCategory] = useState('All Items');
   
   // Download Modal state
   const [downloadModalOpen, setDownloadModalOpen] = useState(false);
@@ -30,9 +30,12 @@ export default function App() {
 
       if (!matchesSearch) return false;
 
-      if (selectedCategory === 'All Mods') return true;
+      if (selectedCategory === 'All Items' || selectedCategory === 'All Mods') return true;
+      if (selectedCategory === 'Simulators') return game.category === 'Simulation' || game.similarTheme === 'Simulation & Crafting';
+      if (selectedCategory === 'Action & RPG') return game.category === 'Action' || game.category === 'Adventure' || game.similarTheme === 'Action & Adventure RPG';
+      if (selectedCategory === 'Casual & Creative') return game.category === 'Casual' || game.category === 'Rewards' || game.similarTheme === 'Casual & Creative';
       if (selectedCategory === 'Mod Menu') return game.badge.includes('MENU') || game.badge.includes('MOD');
-      if (selectedCategory === 'Latest Version') return true;
+      if (selectedCategory === 'Free Codes') return game.itemType === 'code' || game.badge.includes('CODE');
       return game.category.toLowerCase() === selectedCategory.toLowerCase();
     });
   }, [searchQuery, selectedCategory]);
@@ -68,17 +71,16 @@ export default function App() {
       {/* Main Games Grid matching Image 1 */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 py-4">
         {filteredGames.length > 0 ? (
-          <div className="flex justify-center items-center py-4">
-            <div className="w-full max-w-[280px] sm:max-w-[300px]">
-              {filteredGames.map((game) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto py-4 justify-items-center">
+            {filteredGames.map((game) => (
+              <div key={game.id} className="w-full max-w-[280px] sm:max-w-[290px]">
                 <GameCard
-                  key={game.id}
                   game={game}
                   onDownload={handleOpenDownload}
                   onViewDetails={handleOpenDetails}
                 />
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         ) : (
           <div className="text-center py-20 bg-[#070c14] border border-[#132338] rounded-3xl p-8 max-w-md mx-auto">
@@ -182,6 +184,7 @@ export default function App() {
         isOpen={detailsModalOpen}
         onClose={() => setDetailsModalOpen(false)}
         onDownload={handleOpenDownload}
+        onSelectGame={handleOpenDetails}
       />
     </div>
   );
