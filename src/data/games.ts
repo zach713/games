@@ -8,8 +8,72 @@ import graveyardImg from '../assets/images/graveyard_keeper_2_1791128770465.jpg'
 import stevenImg from '../assets/images/steven_universe_save_light_1791126189180.jpg';
 import stealEggImg from '../assets/images/steal_egg_codes_icon_1790038420553.jpg';
 import pokemonSpooferImg from '../assets/images/pokemon_go_spoofer_1791828613871.jpg';
+import speedStarsImg from '../assets/images/speed_stars_mod_1793300987138.jpg';
+import noomiCloneImg from '../assets/images/noomiclone_mod_1793301150762.jpg';
 
 export const GAMES: GameMod[] = [
+  {
+    id: 'noomiclone-mod',
+    title: 'NoomiClone Mod',
+    shortTitle: 'NoomiClone',
+    badge: 'MOD MENU • SANDBOX',
+    itemType: 'mod',
+    version: 'v1.8.5 PRO',
+    sizeMB: 110,
+    displaySize: '110 MB',
+    image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMIj1YEjgCg7jOa0kXRssc3QT6amt_G3LKxwmWk6BFqb6llXJ81wEXAybDi9bigSVQIgOjkhcNO5qX86rscd4eGWO050taDAi3ozUZX41aR4GE9_BqxLVQdUZkxdU3pE0PV92g1SjcLaApKzxqxOpVc8zTkiXKt2RyAib1Yi_T1RH3XmVbnbAlZG2oSoA/s500/noomi.webp',
+    downloadsCount: '3.6M+',
+    rating: 4.9,
+    category: 'Simulation',
+    description: 'Ultimate physics sandbox with NoomiClone Mod! Spawn infinite clones, unlock all experimental laboratory tools, gravity controls, god mode, and custom ragdoll skins.',
+    modFeatures: [
+      'Infinite Clones & Spawning Limit Removed',
+      'All Laboratory Tools & Weapons Unlocked',
+      'Custom Gravity, Zero-G & Time Speed Mod',
+      'God Mode & All Ragdoll Skins Active'
+    ],
+    apkName: 'NoomiClone_v1.8.5_ModMenu.apk',
+    ipaName: 'NoomiClone_v1.8.5_ModMenu.ipa',
+    redirectUrl: 'https://appcomplete.org/cl/i/1xxmrk',
+    lastUpdated: 'Updated Today',
+    compatibility: {
+      android: 'Android 8.0+',
+      ios: 'iOS 14.0+'
+    },
+    similarGameIds: ['graveyard-keeper-2', 'how-to-fish'],
+    similarTheme: 'Simulation & Crafting'
+  },
+  {
+    id: 'speed-stars-mod',
+    title: 'Speed Stars Mod',
+    shortTitle: 'Speed Stars',
+    badge: 'MOD MENU • SPEED HACK',
+    itemType: 'mod',
+    version: 'v2.4.1 PRO',
+    sizeMB: 85,
+    displaySize: '85 MB',
+    image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgKB55dejjpasDwbK8KOA1a_gJ2lFlemp3nKz76PKhx3WU4GGWFGQkJdQ7RygqgzhQ14GMC-bPT54PhpGXcO3vwGZ_AUS1xk9v3xkk7Qnkn7zwCsII5Vue-wGPYAPuJaGF8H4akzil_GqVNHuvLAvgPQx3-F0ozJwqyujU7-YQvh311b8Lm6ET1MyIblu0/s800/speed.png',
+    downloadsCount: '4.2M+',
+    rating: 4.8,
+    category: 'Action',
+    description: 'Dominate track and field with Speed Stars Mod! Instant maximum sprint velocity, infinite stamina, perfect auto-tap rhythm, and all custom athletes and tracks fully unlocked.',
+    modFeatures: [
+      'Infinite Stamina & Max Velocity Hack',
+      'Perfect Rhythm & Auto-Tap Sprint',
+      'All Custom Sprinters & Spikes Unlocked',
+      'All World Championship Tracks Open'
+    ],
+    apkName: 'SpeedStars_v2.4.1_ModMenu.apk',
+    ipaName: 'SpeedStars_v2.4.1_ModMenu.ipa',
+    redirectUrl: 'https://appcomplete.org/cl/i/1xxmrk',
+    lastUpdated: 'Updated Today',
+    compatibility: {
+      android: 'Android 7.0+',
+      ios: 'iOS 13.0+'
+    },
+    similarGameIds: ['pokemon-go-spoofer', 'minecraft-dungeons-2'],
+    similarTheme: 'Sports & Sprint Action'
+  },
   {
     id: 'pokemon-go-spoofer',
     title: 'Pokémon GO Spoofer',
