@@ -10,8 +10,40 @@ import stealEggImg from '../assets/images/steal_egg_codes_icon_1790038420553.jpg
 import pokemonSpooferImg from '../assets/images/pokemon_go_spoofer_1791828613871.jpg';
 import speedStarsImg from '../assets/images/speed_stars_mod_1793300987138.jpg';
 import noomiCloneImg from '../assets/images/noomiclone_mod_1793301150762.jpg';
+import adventureTimeImg from '../assets/images/adventure_time_nameless_1793841551317.jpg';
 
 export const GAMES: GameMod[] = [
+  {
+    id: 'adventure-time-secret-nameless-kingdom',
+    title: 'Adventure Time: The Secret of the Nameless Kingdom MOBILE',
+    shortTitle: 'Adventure Time: Nameless Kingdom',
+    badge: 'FULL MOBILE PORT • 60 FPS',
+    itemType: 'mod',
+    version: 'v1.3.0 PRO',
+    sizeMB: 780,
+    displaySize: '780 MB',
+    image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhlCQdjY9DeXgsAWw-dGdDUA47BL2VZD1_uY9Dz8OwkyMIgGJyhufZ1FauDQNgo6Vy_vgD7HlNKA8_g4dyiC8r5a74HIWUlo6udCIjPESoUuc2SWqey0pe1YTHjNCyl-4FdBLcUOdF2iQEXoOxvubtRreKxiMcbPoomkX4xAsQWxkFMxOE14f9wbwtQ2VE/s1280/FINN.jpg',
+    downloadsCount: '3.1M+',
+    rating: 4.9,
+    category: 'Adventure',
+    description: 'Finn and Jake embark on an epic top-down action-adventure RPG journey through the mysterious uncharted Nameless Kingdom! Classic Zelda-like dungeons, full touch controls, infinite stamina, all weapons and items unlocked.',
+    modFeatures: [
+      'Full Game & All Secret Dungeons Unlocked',
+      'Optimized Touch Controls & 60 FPS Engine',
+      'All Swords, Shields & Magic Tools Ready',
+      'Infinite Stamina & Full Princess Questline'
+    ],
+    apkName: 'AdventureTime_NamelessKingdom_v1.3_Mobile.apk',
+    ipaName: 'AdventureTime_NamelessKingdom_v1.3_Mobile.ipa',
+    redirectUrl: 'https://appcomplete.org/cl/i/1xxmrk',
+    lastUpdated: 'Updated Today',
+    compatibility: {
+      android: 'Android 8.0+',
+      ios: 'iOS 14.0+'
+    },
+    similarGameIds: ['steven-universe-save-the-light', 'minecraft-dungeons-2'],
+    similarTheme: 'Action & Adventure RPG'
+  },
   {
     id: 'noomiclone-mod',
     title: 'NoomiClone Mod',
