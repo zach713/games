@@ -11,8 +11,40 @@ import pokemonSpooferImg from '../assets/images/pokemon_go_spoofer_1791828613871
 import speedStarsImg from '../assets/images/speed_stars_mod_1793300987138.jpg';
 import noomiCloneImg from '../assets/images/noomiclone_mod_1793301150762.jpg';
 import adventureTimeImg from '../assets/images/adventure_time_nameless_1793841551317.jpg';
+import ippoImg from '../assets/images/hajime_no_ippo_1794163200230.jpg';
 
 export const GAMES: GameMod[] = [
+  {
+    id: 'hajime-no-ippo-fighting',
+    title: 'Hajime no Ippo: The Fighting!',
+    shortTitle: 'Hajime no Ippo',
+    badge: 'MOD MENU • ALL BOXERS',
+    itemType: 'mod',
+    version: 'v2.1.0 PRO',
+    sizeMB: 620,
+    displaySize: '620 MB',
+    image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiZbuekSjcGK8sU7qA9yL-WaL8fGCsTGe_Nq6USayV6ArP-5pg1xT0MZbvbpC0HGOlyTYsPMo6MBplpzMODCxlftfwcW-8lDiuvOC6OFX7YLwdCho4HxzZUKpVAGWQ8lrhw14ltq5bd-Kurr_76kxDd1Aj_csCPwvuFGvfibt4Xh4z3KRBnkYh9wbI_Cgg/s860/hajimeippo-1681771527957.webp',
+    downloadsCount: '4.7M+',
+    rating: 4.9,
+    category: 'Action',
+    description: 'Step into the ring with Makunouchi Ippo! Experience legendary visceral boxing battles with unlocked Dempsey Roll, infinite spirit stamina, max punch power, and all Kamogawa Gym & World Champion fighters unlocked.',
+    modFeatures: [
+      'All Boxers & World Champions Unlocked',
+      'Max KO Punch Power & Infinite Stamina',
+      'Dempsey Roll & Gazelle Punch Always Ready',
+      'Career Story Mode 100% Unlocked & 60 FPS'
+    ],
+    apkName: 'HajimeNoIppo_v2.1.0_ModMenu.apk',
+    ipaName: 'HajimeNoIppo_v2.1.0_ModMenu.ipa',
+    redirectUrl: 'https://appcomplete.org/cl/i/1xxmrk',
+    lastUpdated: 'Updated Today',
+    compatibility: {
+      android: 'Android 8.0+',
+      ios: 'iOS 14.0+'
+    },
+    similarGameIds: ['speed-stars-mod', 'pokemon-go-spoofer'],
+    similarTheme: 'Combat Sports & Action'
+  },
   {
     id: 'adventure-time-secret-nameless-kingdom',
     title: 'Adventure Time: The Secret of the Nameless Kingdom MOBILE',
