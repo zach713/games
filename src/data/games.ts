@@ -12,8 +12,40 @@ import speedStarsImg from '../assets/images/speed_stars_mod_1793300987138.jpg';
 import noomiCloneImg from '../assets/images/noomiclone_mod_1793301150762.jpg';
 import adventureTimeImg from '../assets/images/adventure_time_nameless_1793841551317.jpg';
 import ippoImg from '../assets/images/hajime_no_ippo_1794163200230.jpg';
+import stickWarImg from '../assets/images/stick_war_legacy_mod_1794508325237.jpg';
 
 export const GAMES: GameMod[] = [
+  {
+    id: 'stick-war-legacy-mod',
+    title: 'Stick War: Legacy Mod',
+    shortTitle: 'Stick War: Legacy',
+    badge: 'MOD MENU • UNLIMITED GEMS',
+    itemType: 'mod',
+    version: 'v2026.1.48',
+    sizeMB: 138,
+    displaySize: '138 MB',
+    image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitUQWwP9kTuuBA3rGGhZCYoJr-0u_yQSci3W7FhZAlMcXugFz3vuN651Mq3CHHtRzOWa7JmBOFAGVafMm2M8LO5V4QhyphenhyphencTpz3zPPgmuhC_L-CjhKQjgVMmtbR0A09Oqa_WwUc8fCHQN4lSaEtvW8_bJZucxcT2tj8UwwsfJrLEycTjjm1v15amD4_AnK4/s512/images-(1)-(7).jpg',
+    downloadsCount: '9.5M+',
+    rating: 4.9,
+    category: 'Action',
+    description: 'Command your stickman army in Stick War: Legacy Mod! Enjoy unlimited gems, infinite gold, zero troop training cooldown, all mythic skins unlocked, and unstoppable Archidons, Speartons, Magikill & Giants.',
+    modFeatures: [
+      'Unlimited Gems, Gold & Max Population',
+      'All Skins (Savage, Lava, Voltaic) Unlocked',
+      'Instant Troop Spawn & Zero Cooldown',
+      'God Mode Statue & All Campaign Modes Open'
+    ],
+    apkName: 'StickWarLegacy_v2026.1_ModMenu.apk',
+    ipaName: 'StickWarLegacy_v2026.1_ModMenu.ipa',
+    redirectUrl: 'https://appcomplete.org/cl/i/1xxmrk',
+    lastUpdated: 'Updated Today',
+    compatibility: {
+      android: 'Android 7.0+',
+      ios: 'iOS 13.0+'
+    },
+    similarGameIds: ['minecraft-dungeons-2', 'hajime-no-ippo-fighting'],
+    similarTheme: 'Action & Adventure RPG'
+  },
   {
     id: 'hajime-no-ippo-fighting',
     title: 'Hajime no Ippo: The Fighting!',
